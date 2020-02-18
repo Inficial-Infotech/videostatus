@@ -49,7 +49,7 @@ class _VideoListState extends State<VideoList> {
     if(videos.length==0) {
       loaddata(
           "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId=" +
-              playlistid + "&key=AIzaSyA332Vyo9vgQDb4F836a8MwL4lPw-vRy-4");
+              playlistid + "&key=id");
     }
 
     }
@@ -101,7 +101,7 @@ class _VideoListState extends State<VideoList> {
                                   interstitialAd1.dispose();
                                 }
 
-                                loaddata("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId="+playlistid+"&key=AIzaSyA332Vyo9vgQDb4F836a8MwL4lPw-vRy-4");
+                                loaddata("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId="+playlistid+"&key=id");
 
                               },
                               child: new Padding(padding: EdgeInsets.fromLTRB(5.0, 0.0, 10.0, 10.0),child: new Stack(
@@ -158,7 +158,7 @@ class _VideoListState extends State<VideoList> {
                   loaddata1(
                       "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&pageToken=" +
                           token + "&playlistId=" + playlistid +
-                          "&key=AIzaSyA332Vyo9vgQDb4F836a8MwL4lPw-vRy-4",
+                          "&key=id",
                       context);
                 }
               },
@@ -170,7 +170,7 @@ class _VideoListState extends State<VideoList> {
 //                  if((index)==(videos.length-1) && token!=null){
 //
 //
-//                    loaddata1("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&pageToken="+token+"&playlistId="+playlistid+"&key=AIzaSyA332Vyo9vgQDb4F836a8MwL4lPw-vRy-4",context);
+//                    loaddata1("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&pageToken="+token+"&playlistId="+playlistid+"&key=id",context);
 //
 //                  }
                     return videos[index]['snippet']['thumbnails']!=null?new Column(
@@ -311,7 +311,7 @@ class _VideoListState extends State<VideoList> {
           text: "Ok",
           isDestructiveAction: true,
           onPressed: () {
-            loaddata("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId="+playlistid+"&key=AIzaSyA332Vyo9vgQDb4F836a8MwL4lPw-vRy-4");
+            loaddata("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=12&playlistId="+playlistid+"&key=id");
 
             // TODO
           },
